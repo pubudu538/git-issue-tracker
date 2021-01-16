@@ -47,15 +47,17 @@
 
 - Replace the following client id and client secret and paste these values in the terminal.
 
-    ```
-    export APIM_CLIENT_ID="CLIENT_ID"
-	export APIM_CLIENT_SECRET="CLIENT_SECRET"
-    export API_ENDPOINT="https://localhost:8243"
-	export TOKEN_ENDPOINT="https://localhost:8243/token"
-    ```
+```
+export APIM_CLIENT_ID="CLIENT_ID"
+export APIM_CLIENT_SECRET="CLIENT_SECRET"
+export API_ENDPOINT="https://localhost:8243"
+export TOKEN_ENDPOINT="https://localhost:8243/token"
+```
 - Start the frontend application
 
     ```
     cd frontend
 	node server.js
     ```
+
+- Navigate to [https://localhost:8000/](https://localhost:8000/)
