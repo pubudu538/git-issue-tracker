@@ -46,7 +46,7 @@ app.post('/', function (req, res) {
 
                 if (status == 'Success') {
                     res.render('index', {
-                        monthlyStat: '', dailyStat: notifyMessage,
+                        monthlyStat: '', dailyStat: 'Notify only if conditions are matched!',
                         dailyError: null, monthlyError: null
                     });
                 }
@@ -148,7 +148,7 @@ function callTokenAndDailyStats(res) {
         dailyPromised.then(function (result) {
 
             res.render('index', {
-                monthlyStat: '', dailyStat: notifyMessage,
+                monthlyStat: '', dailyStat: 'Notify only if conditions are matched!',
                 dailyError: null, monthlyError: null
             });
 
