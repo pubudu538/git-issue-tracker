@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Git Issue Tracker</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <header>
+      <h1>Git Issue Tracker - Product APIM</h1>
+      <p>You can send notifications to your Google Chat Daily and Monthly</p>
+    </header>
+    <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input id="stat" name="statType" value="daily" type="hidden" />
+          <input type="submit" class="ghost-button" value="Send Daily Updates">
+        </form>
+        <% if(dailyStat !== null){ %>
+          <p><%= dailyStat %></p>
+        <% } %>
+
+        <% if(dailyError !== null){ %>
+          <p><%= dailyError %></p>
+        <% } %>
+      </fieldset>
+      <fieldset>
+          <form action="/" method="post">
+            <input id="stat" name="statType" value="monthly" type="hidden" />
+            <input type="submit" class="ghost-button" value="Send Monthly Updates">
+          </form>
+          <% if(monthlyStat !== null){ %>
+            <p><%= monthlyStat %></p>
+          <% } %>
+
+          <% if(monthlyError !== null){ %>
+            <p><%= monthlyError %></p>
+          <% } %>
+        </fieldset>
+    </div>
+  </body>
+</html>

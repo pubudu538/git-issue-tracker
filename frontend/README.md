@@ -1,0 +1,9 @@
+# Git Issue Tracker
+
+
+* Run the web app locally:
+```
+node server.js
+// Now open your browser and visit: localhost:8000
+```
+
