@@ -2,7 +2,7 @@
 **/build/
 !src/**/build/
 
-**/.idea
+mi-artifacts/eventapp/.idea
 # Ignore Gradle GUI config
 gradle-app.setting
 
