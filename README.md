@@ -57,6 +57,7 @@ export TOKEN_ENDPOINT="https://localhost:8243/token"
 
     ```
     cd frontend
+    npm install
 	node server.js
     ```
 
