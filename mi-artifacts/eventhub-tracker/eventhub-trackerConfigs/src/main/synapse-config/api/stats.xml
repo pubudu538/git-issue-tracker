@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/stats" name="stats" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/daily">
+        <inSequence>
+            <class name="org.test.event.hub.EventHub">
+                <property name="statType" value="Daily"/>
+                <property expression="get-property('env', 'google_chat_web_hook')" name="googleChatWebHook"/>
+                <property expression="get-property('env', 'issue_count')" name="issueCount"/>
+            </class>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/monthly">
+        <inSequence>
+            <class name="org.test.event.hub.EventHub">
+                <property name="statType" value="Month"/>
+                <property expression="get-property('env', 'google_chat_web_hook')" name="googleChatWebHook"/>
+                <property expression="get-property('env', 'issue_count')" name="issueCount"/>
+            </class>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
